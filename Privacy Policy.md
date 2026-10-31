@@ -2,7 +2,7 @@
 
 **Effective date:** 31 October 2026
 **App:** BoltJot (package `com.apphux.boltjot`), published under the apphux brand
-**Developer and data controller:** Rajneesh Kumar, United Kingdom
+**Developer and data controller:** Rajneesh Kumar
 **Contact:** apphux@gmail.com
 
 BoltJot is a note-taking app that keeps your notes on your device. This policy explains what the app handles, what leaves your device, and the choices you have. BoltJot has no user accounts, no ads, no analytics service and no developer-run server.
