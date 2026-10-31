@@ -137,5 +137,5 @@ If we change this policy, we will update the date at the top and, for significan
 
 ## 13. Contact
 
-Rajneesh Kumar (apphux), United Kingdom
+Rajneesh Kumar
 Email: apphux@gmail.com
