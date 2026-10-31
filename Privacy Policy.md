@@ -1,207 +1,141 @@
-# Privacy Policy for BoltJot
+# BoltJot Privacy Policy
 
-**Last updated: 24 October 2026**
+**Effective date:** 31 October 2026
+**App:** BoltJot (package `com.apphux.boltjot`), published under the apphux brand
+**Developer and data controller:** Rajneesh Kumar, United Kingdom
+**Contact:** apphux@gmail.com
 
-BoltJot is an Android note-taking and productivity application designed with privacy, simplicity and user control in mind.
+BoltJot is a note-taking app that keeps your notes on your device. This policy explains what the app handles, what leaves your device, and the choices you have. BoltJot has no user accounts, no ads, no analytics service and no developer-run server.
 
-This Privacy Policy explains how BoltJot accesses, uses, stores and protects information when you use the application.
+## 1. Summary
 
-We believe your notes are personal. BoltJot is designed to work offline, with optional features that let you back up, export and access your notes across your own devices.
+- Your notes, labels, reminders, attachments and settings are stored on your device.
+- We do not receive your notes. We do not sell your data or use it for advertising.
+- Data leaves your device only when you use an optional feature (Google Drive backup, a local backup you export, PC Dashboard, a YouTube link preview), or through the services listed in section 6 (crash reports, Google Play purchases, and Google's own device backup).
+- BoltJot is for people aged 13 and over.
 
-## 1. Information You Create
+## 2. Data the app handles
 
-BoltJot allows you to create and manage information including:
+| Data | Purpose | Where it is kept |
+|---|---|---|
+| Notes: titles, text, checklists, labels and sub-labels, pins, colours, trash | The app's core function | On your device |
+| Reminders and schedules | To notify you at the time you choose | On your device |
+| Photos, videos, scanned documents, drawings | Attaching media to notes | On your device |
+| Audio recordings | Voice notes | On your device |
+| Location (optional): coordinates, accuracy and a map link | Stamping a note with where you were, only if you enable automatic location or attach it | On your device, in the note |
+| Text recognised from scanned documents | Making scanned pages searchable | On your device (processed on-device) |
+| Settings, widget appearance, backup schedule | Remembering your choices | On your device |
+| Label PIN and PC Dashboard password | Restricting access inside the app | On your device, as salted hashes protected by an Android Keystore key |
+| Pro purchase status | Unlocking paid features | On your device, encrypted with an Android Keystore key; purchase processing is by Google Play |
+| Google account ID and email (only if you sign in for Drive backup) | Backing up to your own Drive and restoring | On your device; sent to Google as part of sign-in |
+| Crash reports (see section 6.3) | Finding and fixing crashes | Sent to Google (Firebase Crashlytics) |
 
-- Text notes and checklists
-- Labels and sub-labels
-- Images, photographs and other media attachments
-- Voice recordings
-- Reminders and associated dates
-- Links between notes
-- App settings and preferences
+Your notes, media and audio are not encrypted by BoltJot on the device itself. They are protected by Android's app sandbox and your device's own encryption and screen lock. The label PIN restricts access inside the app. It does not encrypt your content.
 
-This information is primarily stored locally on your Android device.
+## 3. Permissions explained
 
-BoltJot does not require you to create a BoltJot account to use its core note-taking features.
+| Permission | What it is for |
+|---|---|
+| Camera | Taking photos, videos and document scans for notes. Asked when you use it. |
+| Microphone | Recording voice notes. Asked when you use it. |
+| Location (precise and approximate) | The optional location stamp on notes. Asked only if you turn on automatic location or attach a location. |
+| Notifications | Reminders, the lock-screen quick-capture notification, pinned notes, and the PC Dashboard indicator. |
+| Exact alarms | Delivering note reminders at the exact time. If it is off, reminders still work but may arrive late. |
+| Run at start-up | Restoring reminders and the quick-capture notification after your phone restarts. |
+| Foreground service | Keeping the quick-capture notification and the PC Dashboard server running. |
+| Biometric / screen lock | Confirming it is you before opening protected settings and recovery. |
+| Internet and network state | Google Drive backup, crash reports, Google Play, YouTube link previews, and checking that you are on Wi-Fi when a backup is set to Wi-Fi only. |
+| Photos, files and folders | BoltJot does not request broad access to your photos or files. It only reads the photos, files or folders you choose through Android's picker, or share into the app. |
 
-Your content is not automatically uploaded to a developer-operated cloud storage service.
+You can turn permissions off in Android Settings. The features that depend on them will stop working, and your existing notes are unaffected.
 
-You control when to use optional features that transfer or export your information.
+## 4. Lock-screen quick capture
 
-## 2. Local Storage and Offline Functionality
+BoltJot can show a persistent notification and a Quick Settings tile that open a capture screen above your lock screen. There is no screen overlay. Please note:
 
-BoltJot is designed to function without an internet connection for its core note-taking features.
+- Anyone holding your locked phone can use the capture screen to add a new note (including a photo, audio or location). It does not show your existing notes, and labels you have protected are hidden while the phone is locked.
+- Notes you pin to the lock screen appear in a notification showing the title and the first 100 characters of the note. Whether that is visible on the lock screen depends on your Android settings. Notes you mark private are not shown.
 
-Notes, attachments, settings and related application data are stored on your device.
+## 5. Optional features that move data
 
-The application accesses this information to provide functionality such as searching, editing, organising, displaying and reminding you about your notes.
+### 5.1 Google Drive backup (optional)
 
-Your locally stored content remains on your device unless you choose to export it, back it up or make it available through an optional sharing feature.
+If you sign in with Google, BoltJot can upload a backup to a folder named "BoltJot Backups" in your own Google Drive, manually or on a schedule. It asks only for the `drive.file` permission, which lets BoltJot see only the files it created. BoltJot also reads your Google account ID and email address to identify the account.
 
-## 3. Google Drive Backup and Restore
+- **What is in a backup:** notes, labels, attachments, audio, drawings, scans, and any note locations. Reminders are not included. It is packaged and encrypted on your device with AES-256-GCM before upload.
+- **How strong the encryption is:** the encryption key is derived from your Google account ID, so you can restore on a new phone by signing in with the same account and no password. This protects the file from casual viewing, but it is not end-to-end encryption and it is not a secret that only you hold. Do not treat a Drive backup as protection against someone who has access to your Google account.
+- **What is not encrypted:** the file name, size and date, and the folder name, which Google can see.
+- **Retention:** BoltJot keeps your five newest backups and deletes older ones.
+- Transfers use HTTPS and, by default, Wi-Fi only.
+- We do not receive your backups. They are stored in your Drive.
 
-BoltJot offers optional Google Drive integration for backing up and restoring your information.
+Google API data is used only to provide this backup and restore feature. It is not sold, not used for advertising, and not transferred to third parties except as needed to provide the feature, and BoltJot's use of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including its Limited Use requirements.
 
-When you enable this feature:
+### 5.2 Local backup (optional)
 
-- You authorise BoltJot to connect to your Google account using Google's authentication services.
-- BoltJot uses the authorised Google Drive access to manage its backup and restore operations.
-- Backup data is encrypted before being uploaded to Google Drive.
-- Encrypted backup files are stored within your Google Drive account.
-- Google processes the information stored through its services according to its own privacy policies and terms.
+You can export a backup file to a folder you choose, manually or on a schedule. It is encrypted with AES-256-GCM using a password you set and a random salt. We cannot recover the password or the file. You are responsible for the file's location and for keeping the password safe.
 
-BoltJot may access the account information, authorisation credentials and backup metadata necessary to operate this feature.
+### 5.3 PC Dashboard (optional, Pro)
 
-Information obtained through Google APIs is used only to provide the relevant user-facing functionality. It is not sold, used for advertising or transferred to data brokers.
+PC Dashboard runs a small web server on your phone so you can use your notes from a computer's browser on the same private Wi-Fi network. It does not send your notes to us or to any cloud service.
 
-BoltJot's use of information received from Google APIs is subject to the Google API Services User Data Policy, including its Limited Use requirements.
+- It uses unencrypted HTTP. Anyone on the same network could potentially see traffic while a session is open. Use it only on a trusted private network.
+- A computer must be approved on your phone with a short code. Sessions expire after inactivity.
+- It requires a screen lock on your phone and an acknowledgement of this warning.
 
-Google Drive backup is optional and is not required for ordinary note-taking.
+### 5.4 Link previews
 
-You may disconnect the integration or manage stored backups using the available application and Google account controls.
+If you paste a YouTube link into a note, BoltJot can show an embedded player from `youtube-nocookie.com`. This contacts Google/YouTube and sends technical data such as your IP address and the video requested. Other links are not fetched. They open in your browser only when you tap them.
 
-## 4. Local Backup and Restore
+## 6. Third-party services
 
-BoltJot supports creating and restoring encrypted local backup files.
+BoltJot uses these services. Each is governed by its own policy.
 
-When you create a local backup, the resulting file is stored in a location you select or authorise through your device.
+1. **Google Drive and Google Sign-In** (section 5.1). [Google Privacy Policy](https://policies.google.com/privacy).
+2. **Google Play Billing.** Purchases of BoltJot Pro are handled by Google Play. We do not receive your payment details. BoltJot keeps an encrypted record of purchase status on your device.
+3. **Firebase Crashlytics (Google).** When the app crashes, a report is sent to Google containing the technical stack trace (class names and code locations only, not exception messages or your note content), app version, Android version, device model, a few fixed labels such as the screen you were on, and a Firebase installation identifier. Google also receives your IP address as part of the connection. We use this only to find and fix bugs. Crash reporting is always on. See [Firebase privacy information](https://firebase.google.com/support/privacy).
+4. **Google ML Kit.** Text recognition and the document scanner run on your device. Google may collect technical usage and performance metrics from these SDKs, as described in [ML Kit's data disclosure](https://developers.google.com/ml-kit/android-data-disclosure).
+5. **YouTube** (section 5.4). [YouTube Terms and Google Privacy Policy](https://policies.google.com/privacy).
+6. **Android's backup service (Google).** Android's own backup, if you have it turned on in your phone settings, may include BoltJot's notes, media and settings in your Google backup and when transferring to a new phone. That is controlled by Google and your device settings, not by BoltJot. BoltJot excludes your label PIN and dashboard credentials from this backup.
 
-You are responsible for deciding where to store, copy or share exported backup files.
+We do not sell your data, share it for advertising, or give it to data brokers. We do not use advertising or analytics SDKs.
 
-Removing BoltJot from your device does not necessarily delete backup files previously saved elsewhere.
+## 7. Security
 
-## 5. Camera, Microphone, Files and Notifications
+- Local-first storage, with no developer server holding your notes.
+- Backups are encrypted before leaving your device (with the limits described in section 5.1).
+- Label PIN and dashboard password are stored as salted hashes protected by a hardware-backed Keystore key where your device supports it, with lockout after repeated failures.
+- Crash reports exclude exception messages and note content.
+- No system is perfectly secure. Keep your phone locked, and keep your device and apps updated.
 
-BoltJot may request device permissions to provide specific features.
+## 8. Retention and deletion
 
-**Camera:** Used when you choose to capture photographs or images for your notes.
+- **On your device:** data stays until you delete it. Deleted notes go to Trash until you empty it or delete them permanently. Uninstalling BoltJot or clearing its storage removes everything stored by the app on the device.
+- **Google Drive backups:** in BoltJot's backup settings, delete any listed backup. Signing out of Google in BoltJot does not delete your backups, and neither does uninstalling the app. You can also delete the "BoltJot Backups" folder in Google Drive, and remove BoltJot's access at myaccount.google.com/permissions (this does not delete the files).
+- **Local backups and exports:** these stay where you saved them until you delete them there.
+- **Android device backup:** manage or delete it in your Google/Android backup settings.
+- **Crash reports:** these are held by Google under Firebase's retention rules. We cannot link a report to you personally, so we cannot look up reports by name or email.
+- **Support emails:** kept for as long as reasonably needed to deal with your request.
 
-**Microphone:** Used when you choose to record audio or use voice-related note features.
+## 9. Your rights
 
-**Photos and files:** Used to attach, import, export or manage media and backup files.
+Depending on where you live (including under UK GDPR), you may have the right to access, correct, delete, restrict or object to the use of your personal data, and to data portability. Because your notes are on your device, you can exercise most of these yourself in the app (including by exporting or deleting your notes). For anything else, email apphux@gmail.com. UK users can also complain to the Information Commissioner's Office (ico.org.uk).
 
-**Notifications:** Used to display reminders and other notifications associated with application functionality.
+If you email support from within the app, the email may include your app version, Android version and device model that you can review and edit before sending.
 
-Permissions are requested or accessed according to the requirements of the relevant Android feature.
+## 10. Children
 
-You can manage available permissions through your Android device settings.
+BoltJot is a general productivity app for people aged 13 and over. It is not directed to children under 13, and we do not knowingly collect personal information from them. If you believe a child under 13 has used the app, contact apphux@gmail.com.
 
-## 6. PC Dashboard and Local Network Access
+## 11. International transfers
 
-BoltJot includes an optional PC Dashboard that allows you to access supported note functionality through a web browser on your local network.
+Google services (Drive, Crashlytics, Google Play, YouTube) may process data in countries outside your own, under Google's own safeguards.
 
-When enabled, the dashboard makes selected application information available to devices that can reach the dashboard's local network address.
+## 12. Changes to this policy
 
-The dashboard uses HTTP rather than HTTPS. This means information transferred between your device and browser is not protected by transport-layer encryption.
+If we change this policy, we will update the date at the top and, for significant changes, tell you in the app or on the app's store listing. Continued use after a change means you accept it.
 
-For this reason, you should only enable the dashboard on a private, trusted network.
+## 13. Contact
 
-Where available, you can enable password protection to help restrict access.
-
-Do not expose the dashboard directly to the public internet or use it over networks you do not trust.
-
-## 7. BoltJot Pro and Purchases
-
-BoltJot offers optional premium functionality through BoltJot Pro.
-
-Purchases are processed through Google Play Billing.
-
-Google handles payment processing and associated payment information according to Google's terms and privacy policies.
-
-BoltJot may access purchase-related information, such as purchase status, product identifiers and transaction tokens, to verify purchases, enable premium features and restore entitlements.
-
-BoltJot does not directly collect or store your complete payment card details through its Google Play Billing integration.
-
-## 8. Data Sharing and Third-Party Services
-
-BoltJot may interact with third-party services when you choose to use features that depend on them.
-
-These include:
-
-- **Google Drive:** Optional encrypted cloud backup and restore.
-- **Google authentication services:** Authorisation for Google account integration.
-- **Google Play Billing:** Processing purchases and managing premium entitlements.
-
-Data is provided to these services only as needed for the relevant functionality, subject to their applicable policies.
-
-You may also choose to export, share or access your information using other applications or devices. Information you deliberately share is subject to the privacy and security practices of the destination.
-
-BoltJot does not sell your note content or personal information to data brokers or advertisers.
-
-## 9. Data Security
-
-BoltJot uses privacy and security measures appropriate to its functionality.
-
-These include:
-
-- Local-first storage for core note content.
-- Encryption of supported backup files.
-- Optional access restrictions and PIN-based protection for supported app features.
-- Android's application security and permission mechanisms.
-- Optional password protection for the PC Dashboard.
-
-No software, device or storage system can be guaranteed completely secure.
-
-Users should keep their devices updated, protect device access credentials and store backup files securely.
-
-The PC Dashboard's HTTP connection is not encrypted and should only be used on trusted private networks.
-
-## 10. Data Retention and Deletion
-
-Locally stored note content generally remains on your device until you delete it through the application, clear its application data or uninstall the application.
-
-You can delete individual notes and other supported content using BoltJot's available controls.
-
-Information exported or backed up outside the application may remain in the chosen destination until separately deleted.
-
-Google Drive backups are managed through the relevant backup management and Google account controls.
-
-If you contact us for support, we may retain your email address, correspondence and information you voluntarily provide for as long as reasonably necessary to respond, maintain support records and meet applicable legal obligations.
-
-For assistance with information that we hold, contact us using the email address below.
-
-## 11. Legal Basis and Your Rights
-
-Where UK or European data protection law applies, we process personal information only when there is an appropriate lawful basis.
-
-Depending on the processing activity, this may include:
-
-- **Contractual necessity:** Providing functionality or support that you request.
-- **Consent:** Where required for optional access to personal information or connected services.
-- **Legitimate interests:** Responding to support enquiries and maintaining the security and reliability of the application, where those interests are not overridden by your rights.
-- **Legal obligations:** Where processing is required by applicable law.
-
-Depending on your location and applicable law, you may have rights to access, correct, delete, restrict or object to certain processing of your personal information, and to data portability or withdrawal of consent where applicable.
-
-Many controls over your locally stored notes are available directly within BoltJot.
-
-To exercise rights concerning personal information held by the developer, contact us using the details below.
-
-UK users also have the right to complain to the Information Commissioner's Office (ICO) at https://ico.org.uk.
-
-## 12. Children's Privacy
-
-BoltJot is a general-purpose productivity application and is not specifically designed for children.
-
-We do not intentionally use the application to solicit personal information from children.
-
-If you believe information concerning a child has been provided directly to us inappropriately, please contact us.
-
-## 13. Changes to This Privacy Policy
-
-We may update this Privacy Policy to reflect changes in BoltJot's functionality, data practices, legal obligations or third-party integrations.
-
-When updated, the revised policy will include a new "Last updated" date.
-
-Where required by law, we will provide additional notice or obtain consent before introducing materially different uses of personal information.
-
-## 14. Contact Us
-
-If you have questions, concerns or requests regarding privacy or data protection, please contact:
-
-**Application:** BoltJot  
-**Developer / Data Controller:** Rajneesh Kumar
-**Email:** apphux@gmail.com  
-**Country:** United Kingdom
-
-We will review privacy-related enquiries and respond as appropriate under applicable law.
+Rajneesh Kumar (apphux), United Kingdom
+Email: apphux@gmail.com
