@@ -1,3 +1,8 @@
+---
+title: BoltJot Privacy Policy
+permalink: /privacy/
+---
+
 # BoltJot Privacy Policy
 
 **Effective date:** 31 October 2026
